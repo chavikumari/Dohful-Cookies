@@ -126,7 +126,7 @@
 }
 
 .pack-option.active {
-    border-color: #1131f0;
+    border-color: #162B9A;
     background: #f4f6ff;
 }
 
@@ -172,7 +172,7 @@
 
 .add-btn {
     width: 100%;
-    background: #1131f0;
+    background: #162B9A;
     color: white;
     padding: 16px;
     border-radius: 30px;
@@ -208,3 +208,6 @@
         right: 10px;
     }
 }
+
+
+
