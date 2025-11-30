@@ -147,30 +147,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-  const tabButtons = document.querySelectorAll('.category-tab');
-  const sections = document.querySelectorAll('.category-section');
+const tabButtons = document.querySelectorAll('.category-tab');
+const sections = document.querySelectorAll('.category-section');
 
-  tabButtons.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const target = btn.dataset.target;
+tabButtons.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const target = btn.dataset.target;
 
-      // 1. update active tab
-      tabButtons.forEach((b) => b.classList.remove('is-active'));
-      btn.classList.add('is-active');
+    // 1. update active tab
+    tabButtons.forEach((b) => b.classList.remove('is-active'));
+    btn.classList.add('is-active');
 
-      // 2. show/hide sections
-      sections.forEach((section) => {
-        const category = section.dataset.category;
+    // 2. show/hide sections
+    sections.forEach((section) => {
+      const category = section.dataset.category;
 
-        if (target === 'all' || target === category) {
-          section.classList.remove('is-hidden');
-        } else {
-          section.classList.add('is-hidden');
-        }
-      });
-
+      if (target === 'all' || target === category) {
+        section.classList.remove('is-hidden');
+      } else {
+        section.classList.add('is-hidden');
+      }
     });
+
   });
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   const categoryButtons = document.querySelectorAll(".category-option2");
@@ -201,124 +201,138 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 function openProduct(id) {
-    window.location.href = `product.html?id=${id}`;
+  window.location.href = `product.html?id=${id}`;
 }
 
 function addToCart(event, name, price, pack, img) {
-    event.stopPropagation(); // prevents opening product page
+  event.stopPropagation(); // prevents opening product page
 
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    let item = {
-        id: Date.now(),
-        name,
-        price,
-        pack,
-        img,
-        quantity: 1
-    };
+  let item = {
+    id: Date.now(),
+    name,
+    price,
+    pack,
+    img,
+    quantity: 1
+  };
 
-    cart.push(item);
-    localStorage.setItem("cart", JSON.stringify(cart));
+  cart.push(item);
+  localStorage.setItem("cart", JSON.stringify(cart));
 
-    alert("Item added to cart!");
+  alert("Item added to cart!");
 }
 
 // ====== PRODUCT PAGE SCRIPT ======
 
 function addItemToCart(item) {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    // Check if same product + same pack already exists
-    let exists = cart.find(
-        c => c.id === item.id && c.pack === item.pack
-    );
+  // Check if same product + same pack already exists
+  let exists = cart.find(
+    c => c.id === item.id && c.pack === item.pack
+  );
 
-    if (exists) {
-        exists.quantity += item.quantity;
-    } else {
-        cart.push(item);
-    }
+  if (exists) {
+    exists.quantity += item.quantity;
+  } else {
+    cart.push(item);
+  }
 
-    localStorage.setItem("cart", JSON.stringify(cart));
-    updateCartCount();
+  localStorage.setItem("cart", JSON.stringify(cart));
+  updateCartCount();
 }
 
 
 //cart drawer function
 
 function openCart() {
-    document.getElementById("cartDrawer").classList.add("open");
-    loadCart();
+  document.getElementById("cartDrawer").classList.add("open");
+  loadCart();
 }
 
 function closeCart() {
-    document.getElementById("cartDrawer").classList.remove("open");
+  document.getElementById("cartDrawer").classList.remove("open");
 }
 
 function loadCart() {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    let container = document.getElementById("cartItems");
-    let subtotal = 0;
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let container = document.getElementById("cartItems");
+  let subtotal = 0;
 
-    container.innerHTML = "";
+  container.innerHTML = "";
 
-    cart.forEach((item, index) => {
-        subtotal += item.price * item.quantity;
+  cart.forEach((item, index) => {
+    subtotal += item.price * item.quantity;
 
-        container.innerHTML += `
-            <div class="cart-item">
-                <div class="cart-left">
-                    <img src="${item.img}">
-                    <div class="cart-info">
-                        <h4>${item.name}</h4>
-                        <p>${item.pack}</p>
+    container.innerHTML += `
+<div class="cart-item">
 
-                        <div class="qty-controls">
-                            <button onclick="updateQty(${index}, -1)">-</button>
-                            <span>${item.quantity}</span>
-                            <button onclick="updateQty(${index}, 1)">+</button>
+    <div class="cart-left">
 
-                            <span class="remove-btn" onclick="removeItem(${index})">🗑</span>
-                        </div>
-                    </div>
+        <div class="cart-thumb">
+            <img src="${item.img}" alt="">
+        </div>
+
+        <div class="cart-info">
+            <h4 class="cart-title">${item.name}</h4>
+            <p class="cart-pack">Pack Size: ${item.pack}</p>
+
+            <div class="cart-actions">
+
+                <div class="qty-controls">
+                    <button onclick="updateQty(${index}, -1)">−</button>
+                    <span>${item.quantity}</span>
+                    <button onclick="updateQty(${index}, 1)">+</button>
                 </div>
 
-                <div class="cart-right">Rs.${item.price * item.quantity}</div>
-            </div>
-        `;
-    });
+                <button class="remove-btn" onclick="removeItem(${index})">
+                    <img src="./images/delete-icon.png">
+                </button>
 
-    document.getElementById("cartSubtotal").textContent = "Rs." + subtotal;
+            </div>
+        </div>
+
+    </div>
+
+    <div class="cart-right">
+        Rs.${item.price * item.quantity}
+    </div>
+</div>
+`;
+  });
+
+  document.getElementById("cartSubtotal").textContent = "Rs." + subtotal;
 }
 
 function updateQty(index, change) {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    cart[index].quantity += change;
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart[index].quantity += change;
 
-    if (cart[index].quantity < 1) cart[index].quantity = 1;
+  if (cart[index].quantity < 1) cart[index].quantity = 1;
 
-    localStorage.setItem("cart", JSON.stringify(cart));
-    loadCart();
-    updateCartCount();
+  localStorage.setItem("cart", JSON.stringify(cart));
+  loadCart();
+  updateCartCount();
 }
 
 function removeItem(index) {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    cart.splice(index, 1);
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.splice(index, 1);
 
-    localStorage.setItem("cart", JSON.stringify(cart));
-    loadCart();
-    updateCartCount();
+  localStorage.setItem("cart", JSON.stringify(cart));
+  loadCart();
+  updateCartCount();
 }
 
 // UPDATE NAVBAR CART COUNT
 function updateCartCount() {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    let count = cart.reduce((sum, item) => sum + item.quantity, 0);
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let count = cart.reduce((sum, item) => sum + item.quantity, 0);
 
-    let badge = document.getElementById("cartCount");
-    if (badge) badge.textContent = count;
+  let badge = document.getElementById("cartCount");
+  if (badge) badge.textContent = count;
 }
 
 updateCartCount(); // auto-load on page open
