@@ -200,5 +200,125 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+function openProduct(id) {
+    window.location.href = `product.html?id=${id}`;
+}
+
+function addToCart(event, name, price, pack, img) {
+    event.stopPropagation(); // prevents opening product page
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let item = {
+        id: Date.now(),
+        name,
+        price,
+        pack,
+        img,
+        quantity: 1
+    };
+
+    cart.push(item);
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    alert("Item added to cart!");
+}
+
+// ====== PRODUCT PAGE SCRIPT ======
+
+function addItemToCart(item) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // Check if same product + same pack already exists
+    let exists = cart.find(
+        c => c.id === item.id && c.pack === item.pack
+    );
+
+    if (exists) {
+        exists.quantity += item.quantity;
+    } else {
+        cart.push(item);
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartCount();
+}
 
 
+//cart drawer function
+
+function openCart() {
+    document.getElementById("cartDrawer").classList.add("open");
+    loadCart();
+}
+
+function closeCart() {
+    document.getElementById("cartDrawer").classList.remove("open");
+}
+
+function loadCart() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let container = document.getElementById("cartItems");
+    let subtotal = 0;
+
+    container.innerHTML = "";
+
+    cart.forEach((item, index) => {
+        subtotal += item.price * item.quantity;
+
+        container.innerHTML += `
+            <div class="cart-item">
+                <div class="cart-left">
+                    <img src="${item.img}">
+                    <div class="cart-info">
+                        <h4>${item.name}</h4>
+                        <p>${item.pack}</p>
+
+                        <div class="qty-controls">
+                            <button onclick="updateQty(${index}, -1)">-</button>
+                            <span>${item.quantity}</span>
+                            <button onclick="updateQty(${index}, 1)">+</button>
+
+                            <span class="remove-btn" onclick="removeItem(${index})">🗑</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart-right">Rs.${item.price * item.quantity}</div>
+            </div>
+        `;
+    });
+
+    document.getElementById("cartSubtotal").textContent = "Rs." + subtotal;
+}
+
+function updateQty(index, change) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart[index].quantity += change;
+
+    if (cart[index].quantity < 1) cart[index].quantity = 1;
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    loadCart();
+    updateCartCount();
+}
+
+function removeItem(index) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.splice(index, 1);
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    loadCart();
+    updateCartCount();
+}
+
+// UPDATE NAVBAR CART COUNT
+function updateCartCount() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let count = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+    let badge = document.getElementById("cartCount");
+    if (badge) badge.textContent = count;
+}
+
+updateCartCount(); // auto-load on page open
