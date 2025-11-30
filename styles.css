@@ -250,7 +250,7 @@ a:hover {
     font-size: 36px;
     font-weight: 600;
     color: #162B9A;      /* same blue as other headings */
-    margin-top: -76px;
+    margin-top: -120px;
     margin-bottom: 800px;
 }
 
@@ -962,7 +962,7 @@ a:hover {
 }
 
 .footer-heading {
-    font-size: 50px;
+    font-size: 2.5rem;
     font-weight: 600;
     margin-bottom: 12px;
 }
@@ -3383,8 +3383,8 @@ background:var(--navy);color:white;font-size:12px;font-weight:500;}
 
 .side-cookie img {
   width: 100%;
-  max-width: 280px;
-  height: auto;
+  width: 400px;
+  height: 400PX;
 }
 
 /* Center wrapper */
@@ -3416,6 +3416,7 @@ background:var(--navy);color:white;font-size:12px;font-weight:500;}
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 1px;
+  z-index: 10;
 }
 
 .badge-number {
@@ -3475,8 +3476,8 @@ background:var(--navy);color:white;font-size:12px;font-weight:500;}
 
 .shop-btn {
   margin-top: 28px;
-  padding: 10px 34px;
-  border-radius: 20px;
+  padding: 18px 50px;
+  border-radius: 8px;
   border: none;
   background: #162B9A;
   color: #ffffff;
@@ -3555,4 +3556,89 @@ background:var(--navy);color:white;font-size:12px;font-weight:500;}
     height: 260px;
   }
 }
+
+.cookie-image-wrapper {
+    margin-top: 60px;   /* Increase number to push it lower */
+}
+
+
+.carousel-center {
+    flex: 0 0 380px;    /* Reduce width */
+}
+
+.cookie-card {
+    padding: 50px 30px 60px;  /* Reduced from ~70px */
+}
+
+
+.cookie-image-wrapper {
+    width: 460px;
+    height: 460px;
+    margin-top: 2px;
+}
+
+
+.cookie-card {
+    width: 480px;          /* Frame width (adjust to taste) */
+    height: 480px;         /* Frame height (independent from cookie) */
+    padding: 0;            /* Remove big spacing that was pushing it */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+.cookie-card {
+  position: relative; /* so z-index stacking works nicely */
+}
+
+/* cookie image slightly “behind” */
+.cookie-image-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+/* label overlapping the bottom of the cookie */
+.cookie-label {
+  position: absolute;
+  z-index: 2;
+  top: 64%;          /* ⬅ moves label downward — increase to push lower */
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-4deg);
+  background: #ffffff;
+  padding: 12px 60px;
+  white-space: nowrap;
+  border-radius: 8px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.16);
+}
+
+
+
+  #shop-btn {
+  position: absolute;
+  bottom: 30px;     /* ⬅ increase to raise higher */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+/* apply rotation to icons */
+.arrow-right img {
+    transform: rotate(-45deg);
+}
+
+.arrow-left img {
+    transform: rotate(135deg);
+}
+
+
+.nav-arrow img {
+    width: 12px;
+    height: 12px;
+}
+
 

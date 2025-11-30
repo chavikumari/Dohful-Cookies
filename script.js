@@ -419,3 +419,68 @@ const bestsellerCookies = [
     link: "#"
   }
 ];
+
+
+
+// ---- Bestseller Cookie Data ----
+
+
+let currentBestsellerIndex = 0;
+
+function updateBestsellerCarousel() {
+  const total = bestsellerCookies.length;
+
+  const mainImg = document.getElementById("main-cookie-img");
+  const leftImg = document.getElementById("left-cookie-img");
+  const rightImg = document.getElementById("right-cookie-img");
+  const nameEl = document.getElementById("cookie-name");
+  const shopBtn = document.getElementById("shop-btn");
+  const flavourCount = document.getElementById("flavour-count");
+
+  const prevIndex = (currentBestsellerIndex - 1 + total) % total;
+  const nextIndex = (currentBestsellerIndex + 1) % total;
+
+  // main cookie
+  const current = bestsellerCookies[currentBestsellerIndex];
+  mainImg.src = current.image;
+  mainImg.alt = current.name;
+  nameEl.textContent = current.name;
+  shopBtn.href = current.link;
+
+  // side cookies
+  const prev = bestsellerCookies[prevIndex];
+  const next = bestsellerCookies[nextIndex];
+
+  leftImg.src = prev.image;
+  leftImg.alt = prev.name;
+
+  rightImg.src = next.image;
+  rightImg.alt = next.name;
+
+  // badge number
+  flavourCount.textContent = total;
+}
+
+function showNextBestseller() {
+  currentBestsellerIndex = (currentBestsellerIndex + 1) % bestsellerCookies.length;
+  updateBestsellerCarousel();
+}
+
+function showPrevBestseller() {
+  currentBestsellerIndex = (currentBestsellerIndex - 1 + bestsellerCookies.length) % bestsellerCookies.length;
+  updateBestsellerCarousel();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  // initial render
+  updateBestsellerCarousel();
+
+  // arrow events
+  const leftArrow = document.querySelector(".arrow-left");
+  const rightArrow = document.querySelector(".arrow-right");
+
+  if (leftArrow && rightArrow) {
+    leftArrow.addEventListener("click", showPrevBestseller);
+    rightArrow.addEventListener("click", showNextBestseller);
+  }
+});
