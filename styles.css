@@ -1900,18 +1900,15 @@ a:hover {
 
 /* inner row of cards */
 .mega-inner {
-  max-width: 1240px;
   margin: 0 auto;
   display: flex;
   justify-content: flex-start;
   gap: 32px;
-  transform: translateX(-60px);   /* shift cards slightly left – tweak value */
 }
 
 /* individual card */
 .mega-card {
-  width: 400px;
-  height: 400px;
+  width:22%;
   background: #F3F2FF;
   border-radius: 18px;
   overflow: hidden;
