@@ -399,3 +399,23 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector(".arrow-left").addEventListener("click", showPrev);
   document.querySelector(".arrow-right").addEventListener("click", showNext);
 });
+
+
+// ---- Bestseller Cookie Data ----
+const bestsellerCookies = [
+  {
+    name: "Nutella Lava Cookies",
+    image: "images/nutella-lava-cookies.png",
+    link: "#"
+  },
+  {
+    name: "Classic Choco Chunk",
+    image: "images/choco-chunk.png",
+    link: "#"
+  },
+  {
+    name: "Choco Brownie Cookies",
+    image: "images/choco-brownie-cookies.png",
+    link: "#"
+  }
+];

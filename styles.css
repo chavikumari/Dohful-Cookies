@@ -3339,3 +3339,220 @@ background:var(--navy);color:white;font-size:12px;font-weight:500;}
   }
 }
 
+
+
+
+
+/* ===== BESTSELLERS SECTION ===== */
+
+.bestseller-section {
+  padding: 60px 20px 80px;
+  background: #FFF7EF;           /* light beige like in the screenshot */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bestsellers-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #162B9A;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* ===== MAIN CAROUSEL LAYOUT ===== */
+
+.bestseller-carousel {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* Side cookies (left & right) */
+
+.side-cookie {
+  flex: 0 0 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.side-cookie img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+}
+
+/* Center wrapper */
+
+.carousel-center {
+  position: relative;
+  flex: 0 0 480px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== ROUND BADGE ===== */
+
+.flavour-badge {
+  position: absolute;
+  top: -65px;
+  left: -65px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid #162B9A;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: #162B9A;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.badge-number {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 4px 0;
+}
+
+/* ===== MAIN COOKIE CARD ===== */
+
+.cookie-card {
+  position: relative;
+  width: 100%;
+  padding: 60px 40px 70px;
+  border-radius: 40px;
+  border: 2px dashed #162B9A;
+  background: #FFF7EF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Big cookie */
+
+.cookie-image-wrapper {
+  width: 340px;      /* increase/decrease this to change cookie size */
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cookie-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Slanted label */
+
+.cookie-label {
+  margin-top: 20px;
+  transform: rotate(-4deg);
+  background: #ffffff;
+  padding: 10px 40px;
+  border-radius: 8px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.16);
+}
+
+.cookie-label span {
+  font-size: 16px;
+  font-weight: 700;
+  color: #162B9A;
+}
+
+/* Shop button */
+
+.shop-btn {
+  margin-top: 28px;
+  padding: 10px 34px;
+  border-radius: 20px;
+  border: none;
+  background: #162B9A;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  cursor: pointer;
+}
+
+/* ===== DIAMOND ARROWS ===== */
+
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  width: 42px;
+  height: 42px;
+  background: #162B9A;
+  border: none;
+  border-radius: 8px;
+  transform: translateY(-50%) rotate(45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.arrow-left {
+  left: -26px;
+}
+
+.arrow-right {
+  right: -26px;
+}
+
+.arrow-icon {
+  transform: rotate(-45deg);
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.nav-arrow:hover,
+.shop-btn:hover {
+  filter: brightness(1.08);
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 900px) {
+  .bestseller-carousel {
+    flex-direction: column;
+  }
+
+  .side-cookie {
+    display: none;         /* hide side cookies on small screens */
+  }
+
+  .carousel-center {
+    flex: 0 0 auto;
+  }
+
+  .flavour-badge {
+    left: 10px;
+  }
+}
+
+@media (max-width: 520px) {
+  .cookie-card {
+    padding: 50px 24px 60px;
+  }
+
+  .cookie-image-wrapper {
+    width: 260px;
+    height: 260px;
+  }
+}
+
