@@ -2877,7 +2877,7 @@ background:var(--navy);color:white;font-size:12px;font-weight:500;}
 .cart-drawer {
     position: fixed;
     top: 0;
-    right: -420px;
+    right: -1000px;
     width: 500px;
     height: 100vh;
     background: #EEF3FF;
