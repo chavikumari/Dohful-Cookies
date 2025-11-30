@@ -29,10 +29,6 @@ p{
 
 /* Image Box */
 .recipe-image-box {
-    padding: 10px;
-    border-radius: 16px;
-    background: #EBF2FF;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.15);
     margin-bottom: 30px;
 }
 
