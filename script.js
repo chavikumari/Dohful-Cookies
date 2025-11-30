@@ -141,3 +141,64 @@ document.addEventListener("DOMContentLoaded", () => {
   filterLocations();
   locationSelect.addEventListener("change", filterLocations);
 });
+
+
+
+
+
+
+  const tabButtons = document.querySelectorAll('.category-tab');
+  const sections = document.querySelectorAll('.category-section');
+
+  tabButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.target;
+
+      // 1. update active tab
+      tabButtons.forEach((b) => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+
+      // 2. show/hide sections
+      sections.forEach((section) => {
+        const category = section.dataset.category;
+
+        if (target === 'all' || target === category) {
+          section.classList.remove('is-hidden');
+        } else {
+          section.classList.add('is-hidden');
+        }
+      });
+
+    });
+  });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const categoryButtons = document.querySelectorAll(".category-option2");
+  const sections = document.querySelectorAll(".category-section");
+
+  categoryButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      // 1. active state on pills
+      categoryButtons.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      // 2. filter sections
+      const filter = btn.dataset.filter; // all / everyday / gifting / sampler / curated
+
+      sections.forEach((section) => {
+        const category = section.dataset.category;
+
+        if (filter === "all" || filter === category) {
+          section.style.display = "";      // show (let CSS/grid handle it)
+        } else {
+          section.style.display = "none";  // hide
+        }
+      });
+    });
+  });
+});
+
+
+
+
+
