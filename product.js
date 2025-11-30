@@ -125,7 +125,7 @@ const PRODUCTS = {
         ]
     },
 
-    "assorted-2": {
+    "sampler-1": {
         name: "Dohful's Special Gift Pack",
         desc: "A delightful gift box filled with Dohful's bestselling cookies.",
         images: ["./images/gifts-2.png"],
@@ -133,15 +133,6 @@ const PRODUCTS = {
             { size: "Special Pack", price: 444 }
         ]
     },
-
-    "assorted-3": {
-        name: "Dohful Gift Card",
-        desc: "A versatile gift card perfect for sharing the joy of Dohful cookies.",
-        images: ["./images/gifts-3.png"],
-        packs: [
-            { size: "Gift Card", price: 497 }
-        ]
-    }
 };
 
 
