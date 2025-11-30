@@ -89,32 +89,61 @@ const PRODUCTS = {
         ]
     },
     "ultimate-diwali-box": {
-    name: "The Ultimate Diwali Gift Box",
-    desc: "A festive premium gift box curated specially for Diwali, filled with Dohful’s bestselling cookies and treats.",
-    images: ["./images/gifts-1.png"],
-    packs: [
-        { size: "Standard Box", price: 1100 }
-    ]
-},
+        name: "The Ultimate Diwali Gift Box",
+        desc: "A festive premium gift box curated specially for Diwali, filled with Dohful’s bestselling cookies and treats.",
+        images: ["./images/gifts-1.png"],
+        packs: [
+            { size: "Standard Box", price: 1100 }
+        ]
+    },
 
-"special-gift-pack": {
-    name: "Dohful's Special Gift Pack",
-    desc: "A beautifully curated gift pack filled with your favourite Dohful cookies — perfect for gifting to loved ones.",
-    images: ["./images/gifts-2.png"],
-    packs: [
-        { size: "Standard Box", price: 444 }
-    ]
-},
+    "special-gift-pack": {
+        name: "Dohful's Special Gift Pack",
+        desc: "A beautifully curated gift pack filled with your favourite Dohful cookies — perfect for gifting to loved ones.",
+        images: ["./images/gifts-2.png"],
+        packs: [
+            { size: "Standard Box", price: 444 }
+        ]
+    },
 
-"dohful-gift-card": {
-    name: "Dohful Gift Card",
-    desc: "Let them choose their favourite cookies! The perfect gifting option when you're not sure what they would love.",
-    images: ["./images/gifts-3.png"],
-    packs: [
-        { size: "Gift Card", price: 497 }
-    ]
-}
+    "dohful-gift-card": {
+        name: "Dohful Gift Card",
+        desc: "Let them choose their favourite cookies! The perfect gifting option when you're not sure what they would love.",
+        images: ["./images/gifts-3.png"],
+        packs: [
+            { size: "Gift Card", price: 497 }
+        ]
+    },
+
+
+    "assorted-1": {
+        name: "The Ultimate Diwali Gift Box",
+        desc: "A premium festive cookie box curated for special celebrations.",
+        images: ["./images/gifts-1.png"],
+        packs: [
+            { size: "Standard Box", price: 1100 }
+        ]
+    },
+
+    "assorted-2": {
+        name: "Dohful's Special Gift Pack",
+        desc: "A delightful gift box filled with Dohful's bestselling cookies.",
+        images: ["./images/gifts-2.png"],
+        packs: [
+            { size: "Special Pack", price: 444 }
+        ]
+    },
+
+    "assorted-3": {
+        name: "Dohful Gift Card",
+        desc: "A versatile gift card perfect for sharing the joy of Dohful cookies.",
+        images: ["./images/gifts-3.png"],
+        packs: [
+            { size: "Gift Card", price: 497 }
+        ]
+    }
 };
+
 
 
 let params = new URLSearchParams(window.location.search);
