@@ -2874,19 +2874,13 @@ background:var(--navy);color:white;font-size:12px;font-weight:500;}
 
 
 
-/*cart css*/
-
-/* ----------------------
-   CART DRAWER (DOHFUL STYLE)
-   ---------------------- */
-
 .cart-drawer {
     position: fixed;
     top: 0;
     right: -420px;
-    width: 380px;
+    width: 500px;
     height: 100vh;
-    background: #ffffff;
+    background: #EEF3FF;
     box-shadow: -4px 0px 18px rgba(0,0,0,0.12);
     padding: 20px 25px;
     transition: right 0.35s ease;
@@ -2908,6 +2902,7 @@ background:var(--navy);color:white;font-size:12px;font-weight:500;}
 .cart-drawer-header h2 {
     font-size: 22px;
     font-weight: 700;
+    color: #162B9A;
 }
 
 .cart-close {
@@ -2918,78 +2913,117 @@ background:var(--navy);color:white;font-size:12px;font-weight:500;}
 }
 
 /* BODY LIST */
+
+/* Cart Drawer */
 .cart-body {
-    margin-top: 25px;
+    padding: 20px;
     flex: 1;
-    overflow-y: auto;
-    padding-right: 10px;
 }
 
+/* Cart Item Container */
 .cart-item {
-    background: #f9f9ff;
-    border-radius: 12px;
-    padding: 15px;
-    margin-bottom: 18px;
+  width: 100%;
+    border-radius: 16px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-}
-
-.cart-item-left {
-    display: flex;
-    gap: 12px;
     align-items: center;
+    margin-bottom: 18px;
 }
 
-.cart-item-left img {
-    width: 70px;
-    height: 70px;
-    border-radius: 12px;
-    box-shadow: 0px 3px 8px rgba(0,0,0,0.12);
-}
-
-.cart-item-info h4 {
-    font-size: 16px;
-    font-weight: 600;
-    margin: 0 0 4px;
-}
-
-.cart-item-info p {
-    margin: 0;
-    font-size: 14px;
-    color: #6b6b6b;
-}
-
-/* Quantity Box — EXACT DOHFUL STYLE */
-.qty-box {
+/* Left side: Image + Info */
+.cart-left {
     display: flex;
     align-items: center;
-    background: white;
-    border-radius: 10px;
-    border: 1px solid #e2e2ff;
-    padding: 6px 12px;
-    gap: 12px;
-    margin-top: 10px;
-    width: fit-content;
+    gap: 18px;
 }
 
-.qty-box button {
-    background: none;
-    border: none;
+/* Pink rounded image box */
+.cart-thumb {
+  width: 40%;
+      border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.cart-thumb img {
+    width: 85%;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* Product Info */
+.cart-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cart-title {
     font-size: 18px;
+    font-weight: 700;
+    color: #162B9A;
+    margin: 0;
+}
+
+.cart-pack {
+    font-size: 14px;
+    color: #162B9A;
+    margin: 0;
+}
+
+/* Quantity + delete */
+.cart-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+/* Qty Controls */
+.qty-controls {
+    display: flex;
+    align-items: center;
+    border: 2px solid #162B9A;
+    border-radius: 30px;
+    font-size: 12px;
+    padding: 6px 14px;
+    gap: 12px;
+}
+
+.qty-controls button {
+    background: transparent;
+    border: none;
+    font-size: 20px;
     font-weight: 600;
+    color: #162B9A;
     cursor: pointer;
 }
 
-.qty-box span {
-    font-size: 16px;
+.qty-controls span {
+    font-size: 17px;
+    font-weight: 600;
+    color: #162B9A;
 }
 
-.remove-icon {
-    margin-left: 12px;
-    font-size: 22px;
+/* Delete button */
+.remove-btn {
+    background: transparent;
+    border: none;
     cursor: pointer;
 }
+
+.remove-btn img {
+    width: 22px;
+}
+
+/* Right side price */
+.cart-right {
+    font-size: 20px;
+    font-weight: 700;
+    color: #162B9A;
+}
+
 
 /* PRICE RIGHT SIDE */
 .cart-item-price {
@@ -3037,8 +3071,6 @@ background:var(--navy);color:white;font-size:12px;font-weight:500;}
     background: #ccc;
     border-radius: 20px;
 }
-
-
 
 
 
