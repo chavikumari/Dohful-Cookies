@@ -1,0 +1,79 @@
+/* Background */
+body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #162B9A;
+}
+
+/* Container */
+.blog-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Title */
+.blog-title {
+    text-align: center;
+    font-size: 38px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    color: #162B9A;
+}
+
+/* Image Box */
+.blog-image-box {
+    background: #EBF2FF;
+    padding: 14px;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+    margin-bottom: 40px;
+}
+
+.blog-img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* Main Content Card */
+.blog-card {
+    background: #EBF2FF;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* Subheading */
+.subheading {
+    margin-top: 30px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #162B9A;
+}
+
+/* List */
+.craft-list {
+    padding-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.craft-list li {
+    margin-bottom: 14px;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    .blog-card {
+        padding: 20px;
+    }
+
+    .blog-title {
+        font-size: 30px;
+    }
+}

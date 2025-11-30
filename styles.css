@@ -21,7 +21,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 80px 30px 80px;
+    padding: 20px 60px;
 }
 
 
@@ -30,7 +30,7 @@ body {
     font-size: 45px;
     font-weight: 400;
     letter-spacing: 1px;
-    margin: 0 80px;
+    margin: 0 40px;
 }
 
 a {
@@ -149,8 +149,12 @@ a:hover {
     opacity: 0.85;
 }
 
+.hero-right{
+  width: 50%;
+}
+
 .hero-right img {
-    width: 728px;
+    width: 100%;
     border-radius: 16px;
     object-fit: cover;
 }
@@ -255,6 +259,7 @@ a:hover {
 
 /* Entire wrapper */
 .try-section {
+  width: 100%;
     position: relative;
     padding: 120px 0;
     background: #FFF7EF;
@@ -567,7 +572,7 @@ a:hover {
 
 
 .brand-section {
-  max-width: 1240px;
+  width: 90%;
   margin: 50px auto 0 auto;
   padding: 40px 24px;
   background: #e4f1fe;
@@ -706,8 +711,7 @@ a:hover {
 
 .carousel-wrapper {
   position: relative;
-  width: 80vw;
-  max-width: 900px;
+  width: 80%;
   height: 400px;
   background: #fdf4e8; /* outer beige */
   display: flex;
@@ -840,7 +844,7 @@ a:hover {
 
 .carousel-wrapper {
   position: relative;
-  width: 90vw;      /* was 80vw */
+  width: 100%;      /* was 80vw */
   max-width: 1200px;/* bigger max width */
   height: 750px;    /* was 400px */
   background: #FFF7EF;
@@ -871,11 +875,11 @@ a:hover {
 
 
 .cookie-section {
-  width: 100%;
+  width: 70%;
   /* controls how tall this band is inside your page */
   padding: 80px 0;              /* vertical space around the block */
-  display: flex;
-  justify-content: center;      /* center horizontally */
+  display: block;
+  margin: 0 auto;      /* center horizontally */
 }
 
 
@@ -903,11 +907,11 @@ a:hover {
 
 /* FOOTER CARD */
 .footer-card {
-    width: 100%;
+    width: 70%;
     max-width: 1150px;
     background: #162b9a;
     border-radius: 32px;
-    padding: 90px 110px;
+    padding: 80px 100px;
     color: #fff;
 
     display: grid;
@@ -1820,12 +1824,6 @@ a:hover {
   font-size: 14px;
 }
 
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 30px 80px;
-}
 
 .nav-menu {
   display: flex;
@@ -2580,21 +2578,6 @@ background:var(--navy);color:white;font-size:12px;font-weight:500;}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .mega-card {
     display: block;
     text-decoration: none;
@@ -2623,6 +2606,271 @@ background:var(--navy);color:white;font-size:12px;font-weight:500;}
 
 .col-card .col-link {
     pointer-events: auto; /* only this captures click */
+}
+
+.thank-you-box {
+    text-align: center;
+    padding: 40px;
+    border-radius: 14px;
+    background: #f9f6f2;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    animation: fadeIn .6s ease-in-out;
+}
+
+/* Apply color to heading + text */
+.thank-you-box h2,
+.thank-you-box p {
+    color: #162b9a;
+}
+
+.thank-you-box h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.thank-you-box p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Smooth fade effect */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+
+
+.footer-input-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.footer-input-wrapper input {
+    padding-right: 45px; /* space for the arrow */
+    height: 22px; /* adjust based on your input height */
+}
+
+.footer-submit-btn {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.footer-submit-btn img {
+    width: 12px; /* adjust size */
+    height: auto;
+    display: block;
+}
+
+
+
+.bestseller-section {
+  padding: 60px 20px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bestsellers-title{
+  font-size: 32px;
+  font-weight: 700;
+  color: #162B9A;
+  margin-bottom: 40px;
+}
+
+/* ===== Carousel layout ===== */
+.bestseller-carousel {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* Side cookies */
+.side-cookie {
+  flex: 0 0 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.side-cookie img {
+  width: 100%;
+  height: 400px;
+  width: 400px;
+}
+
+/* Center card wrapper */
+.carousel-center {
+  position: relative;
+  flex: 0 0 460px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Round badge */
+.flavour-badge {
+  position: absolute;
+  top: -65px;
+  left: -65px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid #162B9A;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: #162B9A;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.badge-number {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 4px 0;
+}
+
+/* Main cookie card */
+.cookie-card {
+  position: relative;
+  width: 100%;
+  padding: 60px 40px 70px;
+  border-radius: 40px;
+  border: 2px dashed #162B9A;
+  background: #FFF7EB;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Main cookie image */
+.cookie-image-wrapper {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cookie-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Slanted label */
+.cookie-label {
+  margin-top: 20px;
+  transform: rotate(-4deg);
+  background: #fff;
+  padding: 10px 40px;
+  border-radius: 8px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.16);
+}
+
+.cookie-label span {
+  font-size: 16px;
+  font-weight: 700;
+  color: #162B9A;
+}
+
+/* Shop button */
+.shop-btn {
+  margin-top: 28px;
+  padding: 10px 34px;
+  border-radius: 20px;
+  border: none;
+  background: #162B9A;
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  cursor: pointer;
+}
+
+/* Diamond arrows */
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  width: 42px;
+  height: 42px;
+  background: #162B9A;
+  border: none;
+  border-radius: 8px;
+  transform: translateY(-50%) rotate(45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.arrow-left {
+  left: -26px;
+}
+
+.arrow-right {
+  right: -26px;
+}
+
+.arrow-icon {
+  transform: rotate(-45deg);
+  color: #fff;
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* Hover effects */
+.nav-arrow:hover {
+  filter: brightness(1.1);
+}
+
+.shop-btn:hover {
+  filter: brightness(1.1);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .bestseller-carousel {
+    flex-direction: column;
+  }
+
+  .side-cookie {
+    display: none;
+  }
+
+  .carousel-center {
+    flex: 0 0 auto;
+  }
+
+  .flavour-badge {
+    left: 10px;
+  }
+}
+
+@media (max-width: 520px) {
+  .cookie-card {
+    padding: 50px 24px 60px;
+  }
+
+  .cookie-image-wrapper {
+    width: 220px;
+    height: 220px;
+  }
 }
 
 
@@ -2790,3 +3038,307 @@ background:var(--navy);color:white;font-size:12px;font-weight:500;}
     background: #ccc;
     border-radius: 20px;
 }
+
+
+
+
+
+
+.tilted-blog{
+    display: block;             /* makes margin auto work */
+    background: #EBF1FF;
+    color: #162B9A;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 12px 26px;
+    border-radius: 6px;
+    transform: rotate(-2deg);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+    
+    width: fit-content;         /* shrink to actual text */
+    margin: 36px auto;          /* centers horizontally */
+    text-align: center;
+}
+
+
+
+
+.say-hi-blog{
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600; 
+    color: #162B9A;      /* same blue as other headings */
+
+}
+
+
+.blog-para{
+  width: 40%;             /* readable width */
+  margin: 0 auto;     /* pulls text closer to image */
+  font-size: 18px;
+  line-height: 1.75;
+  font-weight: 500;
+  color:#162B9A;
+  text-align: center;
+  margin-bottom: 4  0px;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+.page-wrapper45 {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  margin-top: -220px;
+  margin-bottom: -180px;;
+}
+
+/* Main Card */
+.recipe-card45 {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  background: #f9f7ff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+}
+
+/* Left side image */
+.recipe-image45 {
+  flex: 1.1;
+}
+.recipe-image45 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Right content */
+.recipe-content45 {
+  flex: 1;
+  padding: 40px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* prevents children from stretching full width */
+
+}
+
+/* Tag pill */
+.recipe-tag45 {
+  display: inline-block;
+  padding: 6px 16px;
+  font-size: 12px;
+  border-radius: 999px;
+  background: #162B9A;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+/* Heading */
+.recipe-title45 {
+  margin: 0 0 16px;
+  font-size: 28px;
+  line-height: 1.25;
+  color: #162B9A;
+}
+
+/* Description */
+.recipe-text45 {
+  margin: 0 0 28px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555a70;
+}
+
+/* Button */
+.recipe-btn45 {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: #162B9A;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  outline: none;
+  transition: .2s;
+}
+
+.btn-icon45 {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  color: #162B9A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover */
+.recipe-btn45:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(22, 43, 154, .45);
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .recipe-card45 { flex-direction: column; }
+  .recipe-content45 { padding: 26px; }
+  .recipe-title45 { font-size: 22px; }
+}
+
+
+
+.btn-icon45 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background removed */
+    width: auto;
+    height: auto;
+}
+
+.btn-icon45 img {
+    width: 14px;         /* adjust size */
+    height: 14px;
+    object-fit: contain;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ROW WITH TWO CARDS */
+.blog-row48 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  padding: -10px 20px;
+  margin-bottom: 150px;
+}
+
+/* SINGLE CARD */
+.blog-card48 {
+  background: #F8F7FF;
+  border-radius: 24px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.18);
+  overflow: hidden;                 /* clips everything inside */
+  display: flex;
+  flex-direction: column;
+  max-width: 592px;
+  flex: 1 1 480px;
+}
+
+/* IMAGE AREA */
+.blog-media48 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px 24px 0 0;
+}
+
+.blog-media48 img {
+  display: block;
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+}
+
+/* TAG OVER IMAGE */
+.blog-tag48 {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  padding: 7px 18px;
+  background: #162B9A;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 999px;
+  width: fit-content;
+}
+
+/* TEXT AREA */
+.blog-body48 {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* TITLE */
+.blog-title48 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.3;
+  color: #162B9A;
+}
+
+/* DESCRIPTION */
+.blog-text48 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #53596F;
+  max-width: 90%;
+}
+
+.blog-btn48 {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 26px;
+  background: #162B9A;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  width: fit-content;         /* ← this keeps button compact */
+  align-self: flex-start;     /* ← THIS stops it from stretching right */
+  transition: .22s;
+}
+
+/* ICON (PNG, TRANSPARENT) */
+.blog-icon48 img {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+  margin-top: 4px;
+}
+
+.blog-btn48:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(22, 43, 154, 0.35);
+}
+
+/* RESPONSIVE STACK */
+@media (max-width: 950px) {
+  .blog-row48 {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+

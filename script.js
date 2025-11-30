@@ -322,3 +322,80 @@ function updateCartCount() {
 }
 
 updateCartCount(); // auto-load on page open
+
+
+
+
+
+
+
+// Edit these with your own images & links
+const cookies = [
+  {
+    name: "Nutella Lava Cookies",
+    image: "images/cookie-1.png",
+    link: "#"
+  },
+  {
+    name: "Classic Choco Chunk",
+    image: "images/cookie-2.png",
+    link: "#"
+  },
+  {
+    name: "Triple Chocolate Brownie",
+    image: "images/cookie-3.png",
+    link: "#"
+  }
+  // You can add more flavours here
+];
+
+let currIndex = 0;
+
+function updateCarousel() {
+  const total = cookies.length;
+
+  const mainImg = document.getElementById("main-cookie-img");
+  const leftImg = document.getElementById("left-cookie-img");
+  const rightImg = document.getElementById("right-cookie-img");
+  const nameEl = document.getElementById("cookie-name");
+  const shopBtn = document.getElementById("shop-btn");
+  const flavourCount = document.getElementById("flavour-count");
+
+  const prevIndex = (currIndex - 1 + total) % total;
+  const nextIndex = (currIndex + 1) % total;
+
+  // Main cookie
+  mainImg.src = cookies[currIndex].image;
+  mainImg.alt = cookies[currIndex].name;
+  nameEl.textContent = cookies[currIndex].name;
+  shopBtn.href = cookies[currIndex].link;
+
+  // Side images
+  leftImg.src = cookies[prevIndex].image;
+  leftImg.alt = cookies[prevIndex].name;
+
+  rightImg.src = cookies[nextIndex].image;
+  rightImg.alt = cookies[nextIndex].name;
+
+  // Badge number
+  flavourCount.textContent = total;
+}
+
+function showNext() {
+  currIndex = (currIndex + 1) % cookies.length;
+  updateCarousel();
+}
+
+function showPrev() {
+  currIndex = (currIndex - 1 + cookies.length) % cookies.length;
+  updateCarousel();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Initial render
+  updateCarousel();
+
+  // Arrow clicks
+  document.querySelector(".arrow-left").addEventListener("click", showPrev);
+  document.querySelector(".arrow-right").addEventListener("click", showNext);
+});

@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cookie Details</title>
+    <title>Craft Cookies, Defined</title>
+    <link rel="stylesheet" href="craft.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="product.css">
 </head>
 
 <body>
+
+
     <header class="site-header">
         <div class="announcement">
             Freshly baked cookies 🍪 | Delivered all across India 📦
@@ -72,45 +74,127 @@
                 <li class="account-icon">
                     <a href="#"><img src="./images/Test Account.png" alt="Account Icon"></a>
                 </li>
-
-                <li class="cart-icon" onclick="openCart()">
-                    <img src="./images/Favorite Cart.png" alt="Cart Icon">
-                </li>
             </ul>
         </nav>
     </header>
-    <div class="product-page">
 
-        <div class="product-left">
-            <button class="arrow left" onclick="prevImage()">❮</button>
+    <div class="blog-container">
 
-            <img id="mainImage" class="product-img" src="" alt="Cookie">
+        <h1 class="blog-title">Craft Cookies, Defined</h1>
 
-            <button class="arrow right" onclick="nextImage()">❯</button>
-
-            <div class="thumbnails" id="thumbs"></div>
+        <div class="blog-image-box">
+            <img src="./images/craft-cookies.png" alt="Craft Cookies" class="blog-img">
         </div>
 
-        <div class="product-right">
-            <span class="badge">BEST SELLER</span>
-            <h1 id="productName"></h1>
-            <p id="productDesc"></p>
+        <div class="blog-card">
 
-            <div id="packOptions" class="pack-options"></div>
+            <p>Welcome to Dohful! We are India’s first Craft Cookie brand.</p>
 
-            <div class="qty-box">
-                <button onclick="changeQty(-1)">-</button>
-                <span id="qty">1</span>
-                <button onclick="changeQty(1)">+</button>
-            </div>
+            <p>
+                On reading this, you may wonder what craft cookies are? How are they different from normal cookies?
+                What’s special? Is this a marketing jargon? Or is it really something different or unique happening
+                here?
+            </p>
 
-            <button class="add-btn" onclick="addProductToCart()">Add to Cart</button>
+            <p>
+                Craft cookies are cookies as they should be, as they were meant to be. Cookies as they were made
+                originally.
+                You know before the times we delved so much into machines that making things using your own hands became
+                uncool.
+            </p>
+
+            <p>
+                A good cookie, rather a perfect cookie should not just be perfect in taste. It should have the perfect
+                texture
+                — a delicate balance of soft and crunchy. A nice crunchy exterior but a soft, gooey center. And this is
+                wildly
+                missing from the cookies elsewhere.
+            </p>
+
+            <p>
+                With all the advancement and our over-reliance on machines to do everything for us, we lost the art or
+                craft part
+                of making cookies. As true in most scenarios, true magic only comes out when we balance the science and
+                art of
+                doing something.
+            </p>
+
+            <p>If technology makes things frictionless, art makes it peaceful and satisfying.</p>
+
+            <p>
+                The same is with our cookies. We try making our cookies as they should be (a symphony of flavors &
+                textures) by
+                having a balance between art and technology and that defines why we call ourselves Craft.
+            </p>
+
+            <p>
+                It involves selecting the finest ingredients like the chocolates or nuts that go into the cookie to how
+                the
+                flour is treated before it is used.
+            </p>
+
+            <p>
+                It involves mixing a dough using the machine but cutting the chocolate chunks by hand to achieve the
+                perfectly
+                imperfect chunks. Scooping out the dough with hands and not using any molds so that the cookies do not
+                look
+                like members of a pack.
+            </p>
+
+            <p>
+                Baking in the best of the ovens, but standing in front of it, gazing at the cookies while they bake.
+                It’s
+                mesmerizing seeing the dough balls (scoops) spreading out to form the perfect cookies.
+            </p>
+
+            <p>
+                Chilling the dough in the fridge but checking the temperature of every cookie dough ball before it goes
+                into
+                the oven for baking.
+            </p>
+
+            <p>All of these things make up our craft.</p>
+
+            <h2 class="subheading">But apart from these, there are also five attributes to explain our side of the
+                story:</h2>
+
+            <ol class="craft-list">
+
+                <li>
+                    Small Batch — All our cookies are baked in small batches. Only limited quantities that we can
+                    manage in one go.
+                </li>
+
+                <li>
+                    Artisanal — Amazingly good cookies are a work of art and cannot be made using a formula.
+                    That’s why we spent months perfecting our flavors and techniques.
+                </li>
+
+                <li>
+                    Freshly Baked — Baking for you when you order. No inventory. No storage. Fresh AF.
+                </li>
+
+                <li>
+                    Traditional baking & doughing techniques — Freshest natural ingredients, no premixes,
+                    100% scratch baking, hand-scooped cookie dough, imperfectly perfect cookie shapes.
+                </li>
+
+                <li>
+                    Independent — A small, 100% self-owned enterprise making products we love for the world to
+                    enjoy.
+                </li>
+
+            </ol>
+
+
+            <p>
+                Ultimately by calling it craft, you can expect high quality, true-to-its-roots, soft-baked, real genuine
+                cookies.
+            </p>
 
         </div>
 
     </div>
-
-
 
     <div class="page-wrapper">
 
@@ -167,33 +251,6 @@
     </div>
 
 
-    <!--cart drawer function-->
-    <!-- CART DRAWER -->
-    <div id="cartDrawer" class="cart-drawer">
-
-        <div class="cart-drawer-header">
-            <h2>Your Bag</h2>
-            <button class="cart-close" onclick="closeCart()">✕</button>
-        </div>
-
-        <div class="cart-body" id="cartItems"></div>
-
-        <div class="cart-bottom">
-            <div class="cart-subtotal-line">
-                <span>Sub-Total</span>
-                <span id="cartSubtotal">Rs.0</span>
-            </div>
-
-            <button class="cart-checkout-btn">Check Out</button>
-
-            <p class="cart-note">Tax included. Shipping calculated at checkout.</p>
-        </div>
-
-    </div>
-
-
-    <script src="product.js"></script>
-    <script src="script.js"></script>
 </body>
 
 </html>

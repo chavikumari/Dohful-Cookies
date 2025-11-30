@@ -87,7 +87,33 @@ const PRODUCTS = {
             { size: "5 Pack", price: 444 },
             { size: "10 Pack", price: 820 }
         ]
-    }
+    },
+    "ultimate-diwali-box": {
+    name: "The Ultimate Diwali Gift Box",
+    desc: "A festive premium gift box curated specially for Diwali, filled with Dohful’s bestselling cookies and treats.",
+    images: ["./images/gifts-1.png"],
+    packs: [
+        { size: "Standard Box", price: 1100 }
+    ]
+},
+
+"special-gift-pack": {
+    name: "Dohful's Special Gift Pack",
+    desc: "A beautifully curated gift pack filled with your favourite Dohful cookies — perfect for gifting to loved ones.",
+    images: ["./images/gifts-2.png"],
+    packs: [
+        { size: "Standard Box", price: 444 }
+    ]
+},
+
+"dohful-gift-card": {
+    name: "Dohful Gift Card",
+    desc: "Let them choose their favourite cookies! The perfect gifting option when you're not sure what they would love.",
+    images: ["./images/gifts-3.png"],
+    packs: [
+        { size: "Gift Card", price: 497 }
+    ]
+}
 };
 
 

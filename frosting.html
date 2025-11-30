@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cookie Details</title>
+    <title>Frosting vs Icing</title>
+    <link rel="stylesheet" href="frosting.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="product.css">
 </head>
 
 <body>
+
+
+
     <header class="site-header">
         <div class="announcement">
             Freshly baked cookies 🍪 | Delivered all across India 📦
@@ -73,44 +76,128 @@
                     <a href="#"><img src="./images/Test Account.png" alt="Account Icon"></a>
                 </li>
 
-                <li class="cart-icon" onclick="openCart()">
-                    <img src="./images/Favorite Cart.png" alt="Cart Icon">
+                <li class="cart-icon">
+                    <a href="#"><img src="./images/Favorite Cart.png" alt="Cart Icon"></a>
                 </li>
             </ul>
         </nav>
     </header>
-    <div class="product-page">
 
-        <div class="product-left">
-            <button class="arrow left" onclick="prevImage()">❮</button>
+    <div class="blog-container">
 
-            <img id="mainImage" class="product-img" src="" alt="Cookie">
+        <h1 class="blog-title">Frosting vs Icing</h1>
 
-            <button class="arrow right" onclick="nextImage()">❯</button>
-
-            <div class="thumbnails" id="thumbs"></div>
+        <!-- HERO IMAGE -->
+        <div class="blog-image-box">
+            <img src="./images/cupcake-blog-1.png" class="blog-img" alt="Frosting Image">
         </div>
 
-        <div class="product-right">
-            <span class="badge">BEST SELLER</span>
-            <h1 id="productName"></h1>
-            <p id="productDesc"></p>
+        <!-- INTRO CONTENT -->
+        <div class="blog-card">
 
-            <div id="packOptions" class="pack-options"></div>
+            <p>Do you know that frosting and icing are actually two different things?</p>
 
-            <div class="qty-box">
-                <button onclick="changeQty(-1)">-</button>
-                <span id="qty">1</span>
-                <button onclick="changeQty(1)">+</button>
-            </div>
+            <p>
+                Frosting and Icing are often used interchangeably when we talk about decorating a cake. However, in
+                reality,
+                the two are <b>extremely different</b> from each other and you might have wondered the difference
+                between
+                them at some point while baking.
+            </p>
 
-            <button class="add-btn" onclick="addProductToCart()">Add to Cart</button>
+            <p>
+                The reason why they are often mistaken for each other is that they’re both used for decorating baked
+                goods.
+                But the way each of them is used is quite different from each other.
+            </p>
+
+            <p>
+                The table below highlights the main differences between frosting and icing w.r.t their texture,
+                ingredients,
+                how they are made, and their looks.
+            </p>
 
         </div>
 
+
+
+        <!-- FROSTING TEXT -->
+        <div class="blog-card">
+
+            <img src="./images/cupcake-blog-2.png" class="blog-img" alt="Cupcakes Frosting">
+
+            <p>
+                Frosting is the thick, fluffy mixture that is used to decorate our cakes and cupcakes. It is the stuff
+                that
+                holds shape on your cakes and looks pretty in various designs.
+            </p>
+
+            <p>
+                The frosting is usually made from some <b>kind of fat</b> like Butter or Cream along with sugar and
+                other
+                flavoring agents like Vanilla, Chocolate, Lemon etc. And I’m not sure if it’s a rule, but <b>Frosting is
+                    always whipped.</b>
+            </p>
+
+            <p>There are various types of frostings:</p>
+
+            <ol class="craft-list">
+
+                <li>
+                    <b>Buttercream Frosting</b> — Made of pure butter whipped with powdered sugar. Simple, classic, and
+                    perfect for decorating.
+                </li>
+
+                <li>
+                    <b>Whipped Cream Frosting</b> — Made by whipping heavy cream with powdered sugar until stiff peaks
+                    form.
+                    Commonly used for Black Forest & Pineapple cakes.
+                </li>
+
+                <li>
+                    <b>Cream Cheese Frosting</b> — A richer version made with Butter, Sugar, and Cream Cheese. Perfect
+                    for
+                    Red Velvet, Carrot, and Lemon cakes.
+                </li>
+
+                <li>
+                    <b>Meringue Frosting</b> — Made by heating whipped egg whites with sugar until creamy and airy.
+                    Often
+                    torched after decorating.
+                </li>
+
+            </ol>
+            <img src="./images/cupcake-blog-3.png" class="blog-img" alt="Icing Cake">
+            <br />
+
+            <p>
+                Icing is a thin, runny sugary liquid that hardens on cooling. Most commonly, icing is used to decorate
+                Donuts and Cinnamon Rolls but it is also used on pound cakes like Lemon Pound Cake.
+            </p>
+
+            <p>
+                The main ingredient while making icing is <b>Sugar</b> mixed with water, milk, or cream as per the
+                recipe.
+                Icing can also be flavored with Vanilla or Lemon Juice and then poured over warm baked goods.
+            </p>
+
+            <p>
+                The icing becomes more opaque white in color as everything cools down and the sugar crystals harden.
+            </p>
+
+            <p>
+                Icing can be made in various levels of viscosity depending on the usage but it can <b>never hold its
+                    shape</b> as frosting does.
+            </p>
+        </div>
+
+
+
+        <p style="text-align: center;">
+            Thanks for reading. I hope we could clarify your confusion between frosting and icing. Do let me know if
+            you want to know anything particular.
+        </p>
     </div>
-
-
 
     <div class="page-wrapper">
 
@@ -167,33 +254,7 @@
     </div>
 
 
-    <!--cart drawer function-->
-    <!-- CART DRAWER -->
-    <div id="cartDrawer" class="cart-drawer">
 
-        <div class="cart-drawer-header">
-            <h2>Your Bag</h2>
-            <button class="cart-close" onclick="closeCart()">✕</button>
-        </div>
-
-        <div class="cart-body" id="cartItems"></div>
-
-        <div class="cart-bottom">
-            <div class="cart-subtotal-line">
-                <span>Sub-Total</span>
-                <span id="cartSubtotal">Rs.0</span>
-            </div>
-
-            <button class="cart-checkout-btn">Check Out</button>
-
-            <p class="cart-note">Tax included. Shipping calculated at checkout.</p>
-        </div>
-
-    </div>
-
-
-    <script src="product.js"></script>
-    <script src="script.js"></script>
 </body>
 
 </html>

@@ -59,7 +59,7 @@
                 </li>
 
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="#">Blog</a></li>
+                <li><a href="blog.html">Blog</a></li>
 
                 <li class="logo">
                     <a href="index.html"><img src="./images/logo-dohful.png" alt="Dohful Logo"></a>
@@ -113,7 +113,7 @@
 
                     <div class="cookie-bottom2">
                         <span class="cookie-price2">From ₹ 391</span>
-                        <button class="primary-btn2">Add to Cart</button>
+                        <button class="primary-btn2">Choose Optiions</button>
                     </div>
                 </div>
             </article>
@@ -136,13 +136,13 @@
 
                     <div class="cookie-bottom2">
                         <span class="cookie-price2">From ₹ 444</span>
-                        <button class="primary-btn2">Add to Cart</button>
+                        <button class="primary-btn2">Choose Optiions</button>
                     </div>
                 </div>
             </article>
 
             <!-- CARD 3 -->
-            <article class="cookie-card2">
+            <article class="cookie-card2" onclick="openProduct('nutella-lava')">
                 <div class="cookie-img-wrap2">
                     <img src="./images/cookie2-3.png" alt="Nutella Lava Cookies" class="cookie-img2" />
                     <span class="badge2">BESTSELLER</span>
@@ -160,14 +160,14 @@
 
                     <div class="cookie-bottom2">
                         <span class="cookie-price2">From ₹ 497</span>
-                        <button class="primary-btn2">Add to Cart</button>
+                        <button class="primary-btn2">Choose Optiions</button>
                     </div>
                 </div>
             </article>
 
 
             <!-- CARD 4 -->
-            <article class="cookie-card2">
+            <article class="cookie-card2" onclick="openProduct('toasted-hazelnut')">
                 <div class="cookie-img-wrap2">
                     <img src="./images/cookie2-4.png" alt="Toasted Hazelnut Double Chocolate Cookies"
                         class="cookie-img2" />
@@ -185,13 +185,13 @@
 
                     <div class="cookie-bottom2">
                         <span class="cookie-price2">From ₹ 435</span>
-                        <button class="primary-btn2">Add to Cart</button>
+                        <button class="primary-btn2">Choose Optiions</button>
                     </div>
                 </div>
             </article>
 
             <!-- CARD 5 -->
-            <article class="cookie-card2">
+            <article class="cookie-card2" onclick="openProduct('yin-yang')">
                 <div class="cookie-img-wrap2">
                     <img src="./images/cookie2-5.png" alt="Yin &amp; Yang Chocolate Cookie" class="cookie-img2" />
                 </div>
@@ -208,13 +208,13 @@
 
                     <div class="cookie-bottom2">
                         <span class="cookie-price2">From ₹ 489</span>
-                        <button class="primary-btn2">Add to Cart</button>
+                        <button class="primary-btn2">Choose Optiions</button>
                     </div>
                 </div>
             </article>
 
             <!-- CARD 6 -->
-            <article class="cookie-card2">
+            <article class="cookie-card2" onclick="openProduct('oatmeal-raisin')">
                 <div class="cookie-img-wrap2">
                     <img src="./images/cookie2-6.png" alt="Oatmeal Raisin Cookies" class="cookie-img2" />
                 </div>
@@ -231,13 +231,13 @@
 
                     <div class="cookie-bottom2">
                         <span class="cookie-price2">From ₹ 334</span>
-                        <button class="primary-btn2">Add to Cart</button>
+                        <button class="primary-btn2">Choose Optiions</button>
                     </div>
                 </div>
             </article>
 
             <!-- CARD 7 -->
-            <article class="cookie-card2">
+            <article class="cookie-card2" onclick="openProduct('choco-chunk')">
                 <div class="cookie-img-wrap2">
                     <img src="./images/cookie2-7.png" alt="Choco Chunk Cookies" class="cookie-img2" />
                     <span class="badge2">BESTSELLER</span>
@@ -255,13 +255,13 @@
 
                     <div class="cookie-bottom2">
                         <span class="cookie-price2">From ₹ 364</span>
-                        <button class="primary-btn2">Add to Cart</button>
+                        <button class="primary-btn2">Choose Optiions</button>
                     </div>
                 </div>
             </article>
 
             <!-- CARD 8 -->
-            <article class="cookie-card2">
+            <article class="cookie-card2" onclick="openProduct('red-velvet')">
                 <div class="cookie-img-wrap2">
                     <img src="./images/cookie2-8.png" alt="Red Velvet Cookies" class="cookie-img2" />
                 </div>
@@ -278,13 +278,13 @@
 
                     <div class="cookie-bottom2">
                         <span class="cookie-price2">From ₹ 444</span>
-                        <button class="primary-btn2">Add to Cart</button>
+                        <button class="primary-btn2">Choose Optiions</button>
                     </div>
                 </div>
             </article>
 
             <!-- CARD 9 -->
-            <article class="cookie-card2">
+            <article class="cookie-card2" onclick="openProduct('macadamia-nuts')">
                 <div class="cookie-img-wrap2">
                     <img src="./images/cookie2-9.png" alt="Macadamia Nuts Cookies" class="cookie-img2" />
                 </div>
@@ -301,7 +301,7 @@
 
                     <div class="cookie-bottom2">
                         <span class="cookie-price2">From ₹ 444</span>
-                        <button class="primary-btn2">Add to Cart</button>
+                        <button class="primary-btn2">Choose Optiions</button>
                     </div>
                 </div>
             </article>
@@ -338,14 +338,16 @@
                 <form class="footer-form">
                     <div class="footer-input-wrapper">
                         <input type="email" placeholder="Email">
-                        <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                        <button type="submit" class="footer-submit-btn">
+                            <img src="./images/right-arrow-png.png" alt="Submit Arrow">
+                        </button>
                     </div>
                 </form>
 
                 <div class="footer-socials">
-                    <a href="#" class="insta"><img src="./images/insta.png" alt="Instagram"></a>
-                    <a href="#"><img src="./images/fb.png" alt="Facebook"></a>
-                    <a href="#" class="twitter"><img src="./images/twitter.png" alt="Twitter"></a>
+                    <a href="https://www.instagram.com/dohfulcookies/?hl=en" class="insta"><img src="./images/insta.png" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/dohful/"><img src="./images/fb.png" alt="Facebook"></a>
+                    <a href="https://x.com/dohfulcookies?lang=en" class="twitter"><img src="./images/twitter.png" alt="Twitter"></a>
                 </div>
 
             </div>

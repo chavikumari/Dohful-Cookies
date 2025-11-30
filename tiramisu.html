@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cookie Details</title>
+    <title>Classic Eggless Tiramisu Recipe</title>
+    <link rel="stylesheet" href="tiramisu.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="product.css">
 </head>
 
 <body>
+
+
+
     <header class="site-header">
         <div class="announcement">
             Freshly baked cookies 🍪 | Delivered all across India 📦
@@ -73,42 +76,96 @@
                     <a href="#"><img src="./images/Test Account.png" alt="Account Icon"></a>
                 </li>
 
-                <li class="cart-icon" onclick="openCart()">
-                    <img src="./images/Favorite Cart.png" alt="Cart Icon">
-                </li>
             </ul>
         </nav>
     </header>
-    <div class="product-page">
 
-        <div class="product-left">
-            <button class="arrow left" onclick="prevImage()">❮</button>
+    <div class="recipe-container">
 
-            <img id="mainImage" class="product-img" src="" alt="Cookie">
+        <h1 class="recipe-title">Classic <br>Eggless Tiramisu Recipe</h1>
 
-            <button class="arrow right" onclick="nextImage()">❯</button>
-
-            <div class="thumbnails" id="thumbs"></div>
+        <div class="recipe-image-box">
+            <img src="./images/tiramisu.png" alt="Eggless Tiramisu" class="recipe-image">
         </div>
 
-        <div class="product-right">
-            <span class="badge">BEST SELLER</span>
-            <h1 id="productName"></h1>
-            <p id="productDesc"></p>
+        <div class="recipe-content">
 
-            <div id="packOptions" class="pack-options"></div>
-
-            <div class="qty-box">
-                <button onclick="changeQty(-1)">-</button>
-                <span id="qty">1</span>
-                <button onclick="changeQty(1)">+</button>
+            <!-- LEFT — TEXT DESCRIPTION -->
+            <div class="recipe-intro">
+                <p>
+                    Tiramisu literally means Cheer Me Up! It is made up of the ultimate delicious combination of
+                    the creamy Mascarpone Cheese, strong coffee and crunchy ladyfinger biscuits, sure to pick up
+                    your mood & spirits in no time!
+                </p>
+                <br />
+                <p>
+                    I had been wanting to try my hands on it for a long time but non availability of eggless
+                    Ladyfingers always set me back. So I decided to make them on my own.
+                </p>
+                <br />
+                <p>
+                    A couple of trials later we have the perfect recipe for ladyfingers! So it's time we dunked them
+                    in dark, sinful coffee and layered with mascarpone cheese.
+                </p>
             </div>
 
-            <button class="add-btn" onclick="addProductToCart()">Add to Cart</button>
+            <!-- RIGHT — INGREDIENT BOX -->
+            <div class="ingredients-box">
+                <h2>Ingredients</h2>
 
+                <h3>For Ladyfingers -</h3>
+                <ul>
+                    <li>Milk - 30 g</li>
+                    <li>Sugar - 40 g</li>
+                    <li>Butter - 80 g</li>
+                    <li>Flour - 120 g</li>
+                    <li>Milk Powder - 2 tbsp</li>
+                    <li>Baking Soda - 1/4 tsp</li>
+                    <li>Baking Powder - 1/4 tsp</li>
+                </ul>
+
+                <h3>For Filling -</h3>
+                <ul>
+                    <li>Sugar - 60 g</li>
+                    <li>Whipping Cream - 40 g</li>
+                    <li>Mascarpone Cheese - 350 g</li>
+                </ul>
+
+                <h3>For Assembly -</h3>
+                <ul>
+                    <li>Instant Coffee - 3 tbsp</li>
+                    <li>Hot Water - 1/2 cup</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- METHOD SECTION -->
+        <div class="method-box">
+            <h2>Method</h2>
+
+            <ol>
+                <li>For the first step, we start with making the ladyfingers. For this we cream the butter and sugar
+                    together till the butter looks pale and light in texture.</li>
+                <li>Then we add the flour, baking soda, baking powder & the milk powder, and give it whole a mix. The
+                    mixture will be quite floury at this point.</li>
+                <li>Add the milk to make a smooth but thick batter.</li>
+                <li>Pipe this batter on a lined baking sheet in the shape of long fingers.</li>
+                <li>Bake the ladyfingers for 15 minutes at 175°C.</li>
+                <li>Once cooled, store in an airtight container for 3–4 days.</li>
+                <li>For the filling: Mix Mascarpone cheese with sugar until dissolved.</li>
+                <li>Add whipped cream and fold gently without knocking out the air.</li>
+                <li>Prepare hot coffee and let it cool.</li>
+                <li>Dip ladyfingers 2–3 secs each side and line them in a dish.</li>
+                <li>Add a layer of mascarpone cream on top.</li>
+                <li>Repeat layering with coffee-dipped fingers + cream.</li>
+                <li>Tap the dish to level, then refrigerate 6 hours or overnight.</li>
+                <li>Serve cold, either scooped or sliced.</li>
+                <li>Enjoy!</li>
+            </ol>
         </div>
 
     </div>
+
 
 
 
@@ -166,8 +223,6 @@
 
     </div>
 
-
-    <!--cart drawer function-->
     <!-- CART DRAWER -->
     <div id="cartDrawer" class="cart-drawer">
 
@@ -191,9 +246,6 @@
 
     </div>
 
-
-    <script src="product.js"></script>
-    <script src="script.js"></script>
 </body>
 
 </html>
