@@ -119,7 +119,7 @@ const PRODUCTS = {
     "assorted-1": {
         name: "The Ultimate Diwali Gift Box",
         desc: "A premium festive cookie box curated for special celebrations.",
-        images: ["./images/gifts-1.png"],
+        images: ["./images/assorted-img.png"],
         packs: [
             { size: "Standard Box", price: 1100 }
         ]
@@ -128,7 +128,7 @@ const PRODUCTS = {
     "sampler-1": {
         name: "Dohful's Special Gift Pack",
         desc: "A delightful gift box filled with Dohful's bestselling cookies.",
-        images: ["./images/gifts-2.png"],
+        images: ["./images/sampler-pack.png"],
         packs: [
             { size: "Special Pack", price: 444 }
         ]

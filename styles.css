@@ -26,6 +26,9 @@ body {
     padding: 20px 60px;
 }
 
+.mega-icon:hover{
+  cursor: pointer;
+}
 
 .logo {
     font-family: 'Pacifico', cursive;
