@@ -117,11 +117,12 @@ const PRODUCTS = {
 
 
     "assorted-1": {
-        name: "The Ultimate Diwali Gift Box",
-        desc: "A premium festive cookie box curated for special celebrations.",
+        name: "Assorted Cookies",
+        desc: "Surprize your BAE with this box of delicious handcrafted cookies, baked just for them! You can also add a customized message or a photo along with this box!",
         images: ["./images/assorted-img.png"],
         packs: [
-            { size: "Standard Box", price: 1100 }
+            { size: "5 Pack", price: 426 },
+            { size: "10 Pack", price: 852 }
         ]
     },
 
@@ -171,8 +172,8 @@ window.onload = () => {
         let div = document.createElement("div");
         div.className = "pack-option " + (index === 0 ? "active" : "");
         div.innerHTML = `
-            <span>${pack.size}</span>
-            <span>Rs.${pack.price}</span>
+            <span style="color:#162B9A">${pack.size}</span>
+            <span style="color:#162B9A">Rs.${pack.price}</span>
         `;
         div.onclick = () => selectPack(index);
 
